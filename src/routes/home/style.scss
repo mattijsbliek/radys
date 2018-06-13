@@ -1,0 +1,222 @@
+@import '../../style/functions';
+@import '../../style/variables';
+
+$border-width: 6px;
+
+/*
+ * Background pattern
+ */
+.background {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  right: 15px;
+  height: 120px;
+  background: url('/assets/icons/background-pattern.svg');
+  background-position: top center;
+  background-size: 480px 160px;
+
+  @media (min-width: $breakpoint-small) {
+    height: 160px;
+  }
+}
+
+/*
+ * Layout
+ */
+.layout {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+
+  @media (min-width: $breakpoint-medium) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+/*
+ * Border
+ */
+.layout::before,
+.layout::after {
+  content: '';
+  position: fixed;
+}
+
+.layout::before {
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $gradient-primary;
+}
+
+.layout::after {
+  z-index: -1;
+  top: $border-width - 4px;
+  left: $border-width - 4px;
+  right: $border-width - 4px;
+  bottom: $border-width - 4px;
+  background: #fff;
+
+  @media (min-width: $breakpoint-small) {
+    top: $border-width;
+    left: $border-width;
+    right: $border-width;
+    bottom: $border-width;
+  }
+}
+
+.inner {
+  width: 100%;
+  margin-top: -100px;
+}
+
+/*
+ * Heading
+ */
+.heading {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/*
+ * Subheading
+ */
+.subheading {
+  margin-bottom: 30px;
+  font-size: 20px;
+
+  @media (min-width: $breakpoint-small) {
+    margin-bottom: 40px;
+  }
+}
+
+.subheading a {
+  color: inherit;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+/*
+ * Label
+ */
+.label {
+  position: absolute !important;
+  left: -999em;
+}
+
+/*
+ * Input
+ */
+.input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 30px;
+  padding: 0 15px;
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 300;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+
+  @media (min-width: $breakpoint-medium) {
+    height: 60px;
+    font-size: 24px; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.input::placeholder {
+  color: #ddd;
+  transition: color 0.3s;
+}
+
+
+.input:focus::placeholder {
+  color: #bbb;
+}
+
+/*
+ * Button
+ */
+.button {
+  position: relative;
+  padding: 0 30px;
+  font-size: 18px;
+  line-height: 42px;
+  border: 0;
+  border-radius: 3px;
+  background: $color-primary;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  transition: all 0.1s;
+
+  @media (min-width: $breakpoint-small) {
+    font-size: 24px;
+    line-height: 52px;
+  }
+}
+
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  background: $color-primary-hover;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.button b {
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 8px;
+  transform: translateY(-3px);
+}
+
+.button.isLoading > span {
+  opacity: 0;
+}
+
+.button > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*
+ * Error
+ */
+.error {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  left: 20px;
+  max-width: 700px;
+  padding: 5px 10px;
+  background: tint($color-error, 93%);
+  border: 1px solid rgba($color-error, 0.2);
+  border-radius: 6px;
+  font-size: 14px;
+  
+  @media (min-width: $breakpoint-small) {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

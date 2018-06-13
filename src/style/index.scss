@@ -1,0 +1,70 @@
+@import 'fonts';
+@import 'variables';
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body, button, input {
+  font-family: $default-font-family;
+  font-size: 17px;
+  line-height: $default-line-height;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 32px;
+  line-height: 1;
+
+  @media (min-width: $breakpoint-small) {
+    font-size: 52px;
+  }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: $default-line-height + em;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+input:focus,
+button:focus {
+  outline: 0;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+#app {
+  height: 100%;
+}

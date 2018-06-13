@@ -1,0 +1,24 @@
+@import 'functions';
+
+$color-primary: #DD5E3B;
+$color-primary-hover: shade(#DD5E3B, 7%);
+
+$color-error: #E00606;
+
+$gradient-primary: linear-gradient(-140deg, #EFAE50 0, #DD5E3B 100%);
+$gradient-primary-hover: linear-gradient(-140deg, shade(#EFAE50, 5%) 0, shade(#DD5E3B, 5%) 100%);
+
+$breakpoint-small: 540px;
+$breakpoint-medium: 700px;
+$breakpoint-large: 920px;
+$breakpoint-extra-large: 1100px;
+
+$grey-10: shade(#fff, 10%);
+$grey-15: shade(#fff, 15%);
+$grey-20: shade(#fff, 20%);
+$grey-50: shade(#fff, 50%);
+$grey-80: shade(#fff, 80%);
+
+$default-font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+$default-line-height: 1.5;

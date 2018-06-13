@@ -1,0 +1,270 @@
+@import '../../style/variables';
+@import '../../style/functions';
+
+.recipe {
+  @media (min-width: $breakpoint-medium) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.recipe::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 4px;
+  background: $gradient-primary;
+
+  @media (min-width: $breakpoint-medium) {
+    width: 8px;
+  }
+}
+
+/*
+ * Controls
+ */
+.controls {
+  @media (max-width: $breakpoint-medium - 1px) {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 15px;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    margin-bottom: 50px;
+  }
+}
+
+.controls a,
+.controls button {
+  display: inline-block;
+  padding: 0 15px;
+  border: 1px solid $color-primary;
+  border-radius: 3px;
+  color: $color-primary;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 27px;
+  text-decoration: none;
+}
+
+.controls a:hover,
+.controls a:focus,
+.controls button:hover,
+.controls button:focus {
+  background: tint($color-primary, 95%);
+  text-decoration: none;
+}
+
+/*
+ * Scrollable panes
+ */
+.pane {
+  height: calc(100vh - 50px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 30px;
+  background: #fff;
+
+  @media (min-width: $breakpoint-medium) {
+    padding: 60px 40px;
+    height: 100vh;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    padding: 60px;
+  }
+
+  @media (min-width: $breakpoint-extra-large) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+.pane:last-child {
+  @media (max-width: $breakpoint-medium) {
+    position: fixed;
+    top: 0;
+    left: 4px;
+    right: 0;
+    transition: transform 0.15s ease-out;
+  }
+}
+
+.pane:last-child[aria-hidden] {
+  @media (max-width: $breakpoint-medium) {
+    transform: translateX(100%);
+  }
+}
+
+@media (min-width: $breakpoint-medium) {
+  .pane::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .pane::-webkit-scrollbar-track {
+    background: #f2f2f2;
+    box-shadow: none;
+  }
+
+  .pane::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    outline: none;
+    border-radius: 4px;
+  }
+}
+
+/*
+ * Inner pane
+ */
+.innerPane {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/*
+ * Header
+ */
+.header {
+  margin-bottom: 60px;
+}
+
+.header > *:last-child {
+  margin-bottom: 0;
+}
+
+/*
+ * Subheading
+ */
+.subheading {
+  margin-bottom: 25px;
+
+  @media (min-width: $breakpoint-medium) {
+    display: flex;
+  }
+}
+
+/*
+ * Author
+ */
+.author {
+  display: inline-block;
+  margin-right: 15px;
+  color: $color-primary;
+  font-style: normal;
+  line-height: 25px;
+
+  @media (max-width: $breakpoint-medium - 1px) {
+    margin-bottom: 5px;
+  }
+}
+
+/*
+ * Source
+ */
+.source {
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.source a {
+  text-decoration: none;
+  color: $grey-50;
+}
+
+.source a:hover,
+.source a:focus {
+  color: $grey-80;
+}
+
+.source img {
+  display: inline-block;
+  // Prevents jumping while image loads
+  min-width: 22px;
+  margin-right: 5px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 1px $grey-10;
+}
+
+/*
+ * Description
+ */
+.description {
+  margin-bottom: $default-line-height+em;
+  font-size: 20px;
+}
+
+/*
+ * Image
+ */
+.image {
+  overflow: hidden;
+  position: relative;
+  margin: 0 0 50px;
+  padding-top: 70%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*
+ * Meta data
+ */
+.metaData {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  list-style: none;
+  color: $grey-50;
+}
+
+.metaData li:not(:first-child) {
+  margin-top: 5px;
+}
+
+.metaData svg {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/*
+ * Ingredients
+ */
+.ingredients {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 15px;
+}
+
+.ingredients ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ingredients li:not(:first-child) {
+  margin-top: 1.5em;
+}

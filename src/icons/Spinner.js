@@ -1,0 +1,168 @@
+import React from 'react';
+
+const Spinner = () => (
+  <svg
+    width="16px"
+    height="16px"
+    viewBox="30 30 40 40"
+    preserveAspectRatio="xMidYMid"
+    style={{
+      background: 'none',
+    }}
+  >
+    <g transform="rotate(0 50 50)">
+      <rect
+        x="48"
+        y="30"
+        rx="3.84"
+        ry="2.4"
+        width="4"
+        height="12"
+        fill="currentColor"
+      >
+        <animate
+          attributeName="opacity"
+          values="1;0"
+          dur="0.6s"
+          begin="-0.525s"
+          repeatCount="indefinite"
+        />
+      </rect>
+    </g>
+    <g transform="rotate(45 50 50)">
+      <rect
+        x="48"
+        y="30"
+        rx="3.84"
+        ry="2.4"
+        width="4"
+        height="12"
+        fill="currentColor"
+      >
+        <animate
+          attributeName="opacity"
+          values="1;0"
+          dur="0.6s"
+          begin="-0.45s"
+          repeatCount="indefinite"
+        />
+      </rect>
+    </g>
+    <g transform="rotate(90 50 50)">
+      <rect
+        x="48"
+        y="30"
+        rx="3.84"
+        ry="2.4"
+        width="4"
+        height="12"
+        fill="currentColor"
+      >
+        <animate
+          attributeName="opacity"
+          values="1;0"
+          dur="0.6s"
+          begin="-0.375s"
+          repeatCount="indefinite"
+        />
+      </rect>
+    </g>
+    <g transform="rotate(135 50 50)">
+      <rect
+        x="48"
+        y="30"
+        rx="3.84"
+        ry="2.4"
+        width="4"
+        height="12"
+        fill="currentColor"
+      >
+        <animate
+          attributeName="opacity"
+          values="1;0"
+          dur="0.6s"
+          begin="-0.3s"
+          repeatCount="indefinite"
+        />
+      </rect>
+    </g>
+    <g transform="rotate(180 50 50)">
+      <rect
+        x="48"
+        y="30"
+        rx="3.84"
+        ry="2.4"
+        width="4"
+        height="12"
+        fill="currentColor"
+      >
+        <animate
+          attributeName="opacity"
+          values="1;0"
+          dur="0.6s"
+          begin="-0.225s"
+          repeatCount="indefinite"
+        />
+      </rect>
+    </g>
+    <g transform="rotate(225 50 50)">
+      <rect
+        x="48"
+        y="30"
+        rx="3.84"
+        ry="2.4"
+        width="4"
+        height="12"
+        fill="currentColor"
+      >
+        <animate
+          attributeName="opacity"
+          values="1;0"
+          dur="0.6s"
+          begin="-0.150s"
+          repeatCount="indefinite"
+        />
+      </rect>
+    </g>
+    <g transform="rotate(270 50 50)">
+      <rect
+        x="48"
+        y="30"
+        rx="3.84"
+        ry="2.4"
+        width="4"
+        height="12"
+        fill="currentColor"
+      >
+        <animate
+          attributeName="opacity"
+          values="1;0"
+          dur="0.6s"
+          begin="-0.075s"
+          repeatCount="indefinite"
+        />
+      </rect>
+    </g>
+    <g transform="rotate(315 50 50)">
+      <rect
+        x="48"
+        y="30"
+        rx="3.84"
+        ry="2.4"
+        width="4"
+        height="12"
+        fill="currentColor"
+      >
+        <animate
+          attributeName="opacity"
+          values="1;0"
+          dur="0.6s"
+          begin="0s"
+          repeatCount="indefinite"
+        />
+      </rect>
+    </g>
+  </svg>
+);
+
+export default Spinner;
