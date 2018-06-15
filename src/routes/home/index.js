@@ -2,6 +2,7 @@ import { h, Component } from 'preact';
 import isUrl from 'is-url';
 import Helmet from 'preact-helmet';
 
+import { API_URL } from '~/config';
 import Spinner from '~/icons/Spinner';
 import style from './style';
 
@@ -55,12 +56,7 @@ export default class Home extends Component {
       'Content-Type': 'application/json',
     });
 
-    const url =
-      process.env.NODE_ENV === 'production'
-        ? 'https://nfa2fhkb2d.execute-api.eu-central-1.amazonaws.com/production/'
-        : 'http://api.radys.localhost:3000';
-
-    fetch(url, {
+    fetch(API_URL, {
       headers: requestHeaders,
       method: 'post',
       mode: 'cors',
@@ -111,7 +107,11 @@ export default class Home extends Component {
                 autofill
                 autofocus
               />
-              <button class={`${style.button} ${this.state.loading ? style.isLoading : ''}`}>
+              <button
+                class={`${style.button} ${this.state.loading
+                  ? style.isLoading
+                  : ''}`}
+              >
                 {this.state.loading && <Spinner />}
                 <span>Start cooking</span>
               </button>

@@ -1,19 +1,21 @@
 {
-  "name": "What’s Cooking - Convert your favorite recipes to cooking format.",
-  "short_name": "What’s Cooking",
+  "name": "Radys - Create a kitchen-friendly view of your recipes",
+  "short_name": "Radys",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
   "theme_color": "#3393D6",
-  "icons": [{
-    "src": "/assets/icons/android-chrome-192x192.png",
-    "type": "image/png",
-    "sizes": "192x192"
-  },
-  {
-    "src": "/assets/icons/android-chrome-512x512.png",
-    "type": "image/png",
-    "sizes": "512x512"
-  }]
+  "icons": [
+    {
+      "src": "/assets/icons/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/icons/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
 }

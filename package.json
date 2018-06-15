@@ -11,7 +11,7 @@
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
     "build": "preact build",
     "serve": "preact build && preact serve",
-    "dev": "preact watch",
+    "run": "preact watch",
     "lint": "eslint src"
   },
   "browserslist": ["> 1%", "IE >= 11"],
@@ -25,11 +25,12 @@
   },
   "eslintIgnore": ["build/*"],
   "devDependencies": {
+    "dotenv": "^6.0.0",
     "eslint": "^4.5.0",
     "eslint-config-synacor": "^1.1.0",
     "if-env": "^1.0.0",
     "node-sass": "^4.5.3",
-    "preact-cli": "^2.0.0",
+    "preact-cli": "^2.2.1",
     "prettier": "^1.7.4",
     "sass-loader": "^6.0.6"
   },
