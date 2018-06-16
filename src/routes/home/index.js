@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import isUrl from 'is-url';
+import queryString from 'query-string';
 import Helmet from 'preact-helmet';
 
 import { API_URL } from '~/config';
@@ -17,7 +18,15 @@ export default class Home extends Component {
   constructor(props) {
     super(props);
 
-    this.state.url = this.props.url;
+    if (!location) {
+      return;
+    }
+
+    const search = queryString.parse(location.search);
+
+    if (search.url) {
+      this.state.url = search.url;
+    }
   }
 
   componentDidMount() {
