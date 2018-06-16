@@ -1,3 +1,5 @@
+![Radys logo](https://raw.githubusercontent.com/mattijsbliek/radys/master/src/assets/images/github-header.png)
+
 Radys strips all the clutter from website that contain recipes, and presents them to you in a clean view optimized for use in the kitchen. No more scrolling back up to see how many spoons of sugar you needed to add to that cake recipe.
 
 ## Quick start

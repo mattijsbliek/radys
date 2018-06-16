@@ -4,6 +4,7 @@ import Helmet from 'preact-helmet';
 
 import { API_URL } from '~/config';
 import Spinner from '~/icons/Spinner';
+import Logo from '~/icons/Logo';
 import style from './style';
 
 export default class Home extends Component {
@@ -101,7 +102,9 @@ export default class Home extends Component {
         <div class={style.layout}>
           <Helmet title="Radys, makes your recipes kitchen friendly." />
           <div class={style.inner}>
-            <h1 class={style.heading}>Radys</h1>
+            <h1 class={style.heading}>
+              <Logo width={180} />
+            </h1>
             <p class={style.subheading}>
               Create a kitchen-friendly view of your recipes.{/*
               <a href="#">Read more</a>.*/}
