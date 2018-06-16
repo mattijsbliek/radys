@@ -13,6 +13,18 @@ export default class Home extends Component {
     loading: false,
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state.url = this.props.url;
+  }
+
+  componentDidMount() {
+    if (this.state.url) {
+      this.handleSubmit();
+    }
+  }
+
   handleChange = e => {
     this.setState({
       url: e.target.value,
@@ -37,7 +49,9 @@ export default class Home extends Component {
   };
 
   handleSubmit = e => {
-    e.preventDefault();
+    if (e) {
+      e.preventDefault();
+    }
 
     if (!isUrl(this.state.url)) {
       this.setState({

@@ -9,7 +9,7 @@ Clone this repository to your locale machine.
 yarn
 
 # Run a local development server
-yarn run
+yarn start
 ```
 
 You will also need to run [Radys API](https://github.com/mattijsbliek/radys-api) to actually be able to convert recipes.

@@ -2,8 +2,6 @@ import { h, Component } from 'preact';
 import { Router, route } from 'preact-router';
 import shortId from 'shortid';
 
-//import Header from './header';
-//import Home from '../routes/home';
 import Home from 'async!../routes/home';
 import Recipe from 'async!../routes/recipe';
 
@@ -31,7 +29,6 @@ export default class App extends Component {
   render() {
     return (
       <div id="app">
-        {/*<Header />*/}
         <Router onChange={this.handleRoute}>
           <Home path="/" setRecipe={this.setRecipe} />
           <Recipe path="/recipe/:id" />
